@@ -1,0 +1,42 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - ci_testing
+  pull_request:
+
+jobs:
+  build-project:
+    name: Build Project
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/epicgames/unreal-engine:dev-slim-4.27
+      credentials:
+        username: ${{ secrets.GHCR_USERNAME }}
+        password: ${{ secrets.GHCR_PASSWORD }}
+      options: --user root
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Run
+        run: |
+          chown -R ue4 ${GITHUB_WORKSPACE}/
+          sudo -u ue4 -H /home/ue4/UnrealEngine/Engine/Build/BatchFiles/RunUAT.sh BuildCookRun \
+            -utf8output \
+            -platform=Linux \
+            -clientconfig=Shipping \
+            -serverconfig=Shipping \
+            -project=${GITHUB_WORKSPACE}/SampleProject/SampleProject.uproject \
+            -noP4 \
+            -nodebuginfo \
+            -allmaps \
+            -cook \
+            -build \
+            -stage \
+            -prereqs \
+            -pak \
+            -archive \
+            -archivedirectory=/tmp/Packaged
