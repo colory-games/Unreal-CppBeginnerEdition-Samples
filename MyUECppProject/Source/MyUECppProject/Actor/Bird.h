@@ -2,10 +2,10 @@
 
 #pragma once
 
+#include "../Component/BoosterComponent.h"
 #include "Components/BoxComponent.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "../Component/BoosterComponent.h"
 
 #include "Bird.generated.h"
 
