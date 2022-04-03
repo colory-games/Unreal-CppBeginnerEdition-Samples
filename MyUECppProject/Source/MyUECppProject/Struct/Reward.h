@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
 #include "Reward.generated.h"
 
 USTRUCT(BlueprintType)

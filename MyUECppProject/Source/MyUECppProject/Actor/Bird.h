@@ -2,10 +2,11 @@
 
 #pragma once
 
+#include "Components/BoxComponent.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Components/BoxComponent.h"
 #include "../Component/BoosterComponent.h"
+
 #include "Bird.generated.h"
 
 UCLASS()
@@ -27,15 +28,13 @@ public:
 
 	virtual void OnConstruction(const FTransform& Transform) override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parameter",
-		  meta = (ClampMin = 0.0f, ClampMax = 1000.0f))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parameter", meta = (ClampMin = 0.0f, ClampMax = 1000.0f))
 	float Weight = 10.0f;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Parameter")
 	bool bFlyable = true;
 
-	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "Parameter",
-		  meta = (ClampMin = 1, ClampMax = 5000))
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "Parameter", meta = (ClampMin = 1, ClampMax = 5000))
 	int32 VitalityMax = 100;
 
 	UPROPERTY()

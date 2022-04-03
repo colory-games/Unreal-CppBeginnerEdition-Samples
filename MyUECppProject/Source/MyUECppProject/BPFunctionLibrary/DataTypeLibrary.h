@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+
 #include "DataTypeLibrary.generated.h"
 
 /**
@@ -15,7 +16,6 @@ class MYUECPPPROJECT_API UDataTypeLibrary : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 
 public:
-
 	UFUNCTION(BlueprintCallable)
 	static void ComponentWiseSquared(const FVector& In, FVector& ReturnValue);
 

@@ -1,10 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "MathLibrary.h"
 
 #include "Kismet/KismetMathLibrary.h"
-
 
 float UMathLibrary::Add(float A, float B)
 {
@@ -52,7 +50,7 @@ void UMathLibrary::Divide(int32 A, int32 B, int32& Quotient, int32& Remainder)
 	Remainder = A % B;
 }
 
-void UMathLibrary::AddRef(UPARAM(ref)float& A, float B)
+void UMathLibrary::AddRef(UPARAM(ref) float& A, float B)
 {
 	A += B;
 }

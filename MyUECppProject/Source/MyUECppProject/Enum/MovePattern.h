@@ -3,8 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "MovePattern.generated.h"
 
+#include "MovePattern.generated.h"
 
 UENUM()
 enum class EMovePattern : uint8
@@ -13,4 +13,3 @@ enum class EMovePattern : uint8
 	Walk,
 	Run
 };
-

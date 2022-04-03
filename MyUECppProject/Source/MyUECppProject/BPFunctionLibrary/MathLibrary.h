@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+
 #include "MathLibrary.generated.h"
 
 /**
@@ -15,7 +16,6 @@ class MYUECPPPROJECT_API UMathLibrary : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 
 public:
-
 	UFUNCTION(BlueprintCallable)
 	static float Add(float A, float B);
 
@@ -29,7 +29,7 @@ public:
 	static void Divide(int32 A, int32 B, int32& Quotient, int32& Remainder);
 
 	UFUNCTION(BlueprintCallable)
-	static void AddRef(UPARAM(ref)float& A, float B);
+	static void AddRef(UPARAM(ref) float& A, float B);
 
 	UFUNCTION(BlueprintCallable)
 	static void MinMax(float A, float B, float C, float& Min, float& Max);

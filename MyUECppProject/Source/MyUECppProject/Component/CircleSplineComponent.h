@@ -2,10 +2,10 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
 #include "Components/SplineComponent.h"
-#include "CircleSplineComponent.generated.h"
+#include "CoreMinimal.h"
 
+#include "CircleSplineComponent.generated.h"
 
 UCLASS()
 class MYUECPPPROJECT_API UCircleSplineComponent : public USplineComponent

@@ -2,10 +2,10 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
 #include "../Enum/MovePattern.h"
-#include "MoveParam.generated.h"
+#include "CoreMinimal.h"
 
+#include "MoveParam.generated.h"
 
 USTRUCT(BlueprintType)
 struct FMoveParam
