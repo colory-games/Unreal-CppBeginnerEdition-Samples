@@ -53,7 +53,7 @@ void ABird::OnConstruction(const FTransform& Transform)
 
 void ABird::Damage(int32 Amount)
 {
-	Vitality -= Amount;
+	Vitality = Vitality - Amount;
 
 	if (Vitality < 0)
 	{
@@ -63,7 +63,7 @@ void ABird::Damage(int32 Amount)
 
 void ABird::Cure(int32 Amount)
 {
-	Vitality += Amount;
+	Vitality = Vitality + Amount;
 
 	if (Vitality > VitalityMax)
 	{
