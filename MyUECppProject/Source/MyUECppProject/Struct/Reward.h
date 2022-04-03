@@ -8,14 +8,14 @@
 USTRUCT(BlueprintType)
 struct FReward
 {
-    GENERATED_USTRUCT_BODY()
+	GENERATED_USTRUCT_BODY()
 
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-    int32 Exp = 50;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	int32 Exp = 50;
 
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-    int32 Gold = 100;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	int32 Gold = 100;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    bool bDropItem = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bDropItem = false;
 };

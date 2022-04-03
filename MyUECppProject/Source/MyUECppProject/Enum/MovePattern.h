@@ -9,8 +9,8 @@
 UENUM()
 enum class EMovePattern : uint8
 {
-    Static,
-    Walk,
-    Run
+	Static,
+	Walk,
+	Run
 };
 

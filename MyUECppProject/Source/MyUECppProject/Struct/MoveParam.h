@@ -10,17 +10,17 @@
 USTRUCT(BlueprintType)
 struct FMoveParam
 {
-    GENERATED_USTRUCT_BODY()
+	GENERATED_USTRUCT_BODY()
 
-    UPROPERTY(EditAnywhere)
-    EMovePattern Pattern;
+	UPROPERTY(EditAnywhere)
+	EMovePattern Pattern;
 
-    UPROPERTY(EditAnywhere, meta = (EditCondition = "Pattern != EMovePattern::Static"))
-    FVector Speed;
+	UPROPERTY(EditAnywhere, meta = (EditCondition = "Pattern != EMovePattern::Static"))
+	FVector Speed;
 
-    UPROPERTY(EditAnywhere, meta = (InlineEditConditionToggle))
-    bool bLookTarget;
+	UPROPERTY(EditAnywhere, meta = (InlineEditConditionToggle))
+	bool bLookTarget;
 
-    UPROPERTY(EditAnywhere, meta = (EditCondition = "bLookTarget"))
-    AActor* TargetActor;
+	UPROPERTY(EditAnywhere, meta = (EditCondition = "bLookTarget"))
+	AActor* TargetActor;
 };

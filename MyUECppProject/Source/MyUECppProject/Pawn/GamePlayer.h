@@ -9,27 +9,27 @@
 UCLASS()
 class MYUECPPPROJECT_API AGamePlayer : public APawn
 {
-    GENERATED_BODY()
+	GENERATED_BODY()
 
 public:
-    // Sets default values for this pawn's properties
-    AGamePlayer();
+	// Sets default values for this pawn's properties
+	AGamePlayer();
 
 protected:
-    // Called when the game starts or when spawned
-    virtual void BeginPlay() override;
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 
 public:	
-    // Called every frame
-    virtual void Tick(float DeltaTime) override;
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
 
-    // Called to bind functionality to input
-    virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	// Called to bind functionality to input
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-    void ActionShotPressed();
-    void ActionShotReleased();
-    void AxisMove(float AxisValue);
+	void ActionShotPressed();
+	void ActionShotReleased();
+	void AxisMove(float AxisValue);
 
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-    bool bShooting = false;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	bool bShooting = false;
 };

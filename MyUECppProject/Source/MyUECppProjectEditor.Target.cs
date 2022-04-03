@@ -10,6 +10,6 @@ public class MyUECppProjectEditorTarget : TargetRules
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 
-		ExtraModuleNames.AddRange( new string[] { "MyUECppProject" } );
+		ExtraModuleNames.AddRange(new string[]{"MyUECppProject"});
 	}
 }

@@ -8,7 +8,7 @@
 
 FRotator UAddPinLibrary::CombineMultipleRotators(FRotator A, FRotator B)
 {
-    FRotator Out;
-    Out = UKismetMathLibrary::ComposeRotators(A, B);
-    return Out;
+	FRotator Out;
+	Out = UKismetMathLibrary::ComposeRotators(A, B);
+	return Out;
 }

@@ -12,10 +12,10 @@
 UCLASS()
 class MYUECPPPROJECT_API UAddPinLibrary : public UBlueprintFunctionLibrary
 {
-    GENERATED_BODY()
+	GENERATED_BODY()
 
 public:
 
-    UFUNCTION(BlueprintPure, meta = (CommutativeAssociativeBinaryOperator = "true"))
-    static FRotator CombineMultipleRotators(FRotator A, FRotator B);
+	UFUNCTION(BlueprintPure, meta = (CommutativeAssociativeBinaryOperator = "true"))
+	static FRotator CombineMultipleRotators(FRotator A, FRotator B);
 };
