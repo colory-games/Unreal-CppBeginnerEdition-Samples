@@ -29,7 +29,7 @@ jobs:
             -platform=Linux \
             -clientconfig=Shipping \
             -serverconfig=Shipping \
-            -project=${GITHUB_WORKSPACE}/SampleProject/SampleProject.uproject \
+            -project=${GITHUB_WORKSPACE}/MyUECppProject/MyUECppProject.uproject \
             -noP4 \
             -nodebuginfo \
             -allmaps \
