@@ -4,19 +4,16 @@
 
 #include "Kismet/KismetMathLibrary.h"
 
-void UDataTypeLibrary::ComponentWiseSquared(const FVector& In, FVector& ReturnValue)
+void UDataTypeLibrary::ComponentWiseSquared(const FVector& In, FVector& Out)
 {
-	ReturnValue = In * In;
+	Out = In * In;
 }
 
 void UDataTypeLibrary::AddRotationAngle(const FRotator& In, float X, float Y, float Z, FRotator& Out)
 {
-	FVector OutEuler = In.Euler();
-	OutEuler.X += X;
-	OutEuler.Y += Y;
-	OutEuler.Z += Z;
-
-	Out.MakeFromEuler(OutEuler);
+	Out.Roll = In.Roll + X;
+	Out.Pitch = In.Pitch + Y;
+	Out.Yaw = In.Yaw + Z;
 }
 
 void UDataTypeLibrary::MakeDifference(const FTransform& In1, const FTransform& In2, FTransform& Out)
@@ -28,12 +25,14 @@ void UDataTypeLibrary::MakeDifference(const FTransform& In1, const FTransform& I
 
 void UDataTypeLibrary::RepeatString(const FString& StringToRepeat, int32 RepeatCount, FString& Out)
 {
-	Out = "";
+	FString String = "";
 
 	for (int32 i = 0; i < RepeatCount; i++)
 	{
-		Out += StringToRepeat;
+		String += StringToRepeat;
 	}
+
+	Out = String;
 }
 
 int32 UDataTypeLibrary::Sum(const TArray<int32>& Data)

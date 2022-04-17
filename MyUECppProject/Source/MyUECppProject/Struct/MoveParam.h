@@ -10,7 +10,7 @@
 USTRUCT(BlueprintType)
 struct FMoveParam
 {
-	GENERATED_USTRUCT_BODY()
+	GENERATED_BODY()
 
 	UPROPERTY(EditAnywhere)
 	EMovePattern Pattern;
@@ -22,5 +22,5 @@ struct FMoveParam
 	bool bLookTarget;
 
 	UPROPERTY(EditAnywhere, meta = (EditCondition = "bLookTarget"))
-	AActor* TargetActor;
+	TObjectPtr<AActor> TargetActor;
 };

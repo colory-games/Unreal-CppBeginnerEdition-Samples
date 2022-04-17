@@ -40,7 +40,7 @@ public:
 	UPROPERTY()
 	int32 Vitality = 100;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Parameter")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Status")
 	bool bPoisoned = false;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Internal")
@@ -50,10 +50,10 @@ public:
 	int32 InstanceID = -1;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Region")
-	class UBoxComponent* VisualField = CreateDefaultSubobject<UBoxComponent>(TEXT("VisualField"));
+	TObjectPtr<class UBoxComponent> VisualField = CreateDefaultSubobject<UBoxComponent>(TEXT("VisualField"));
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment")
-	class UBoosterComponent* FlightBooster = CreateDefaultSubobject<UBoosterComponent>(TEXT("FlightBooster"));
+	TObjectPtr<class UBoosterComponent> FlightBooster = CreateDefaultSubobject<UBoosterComponent>(TEXT("FlightBooster"));
 
 	UFUNCTION(BlueprintCallable)
 	void Damage(int32 Amount);

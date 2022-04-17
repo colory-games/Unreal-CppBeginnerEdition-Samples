@@ -36,7 +36,7 @@ int32 UMathLibrary::Accumulate(int32 N)
 {
 	int32 Out = 0;
 
-	for (int32 i = 1; i <= N; ++i)
+	for (int32 i = 1; i <= N; i++)
 	{
 		Out = Out + i;
 	}
@@ -57,8 +57,8 @@ void UMathLibrary::AddRef(UPARAM(ref) float& A, float B)
 
 void UMathLibrary::MinMax(float A, float B, float C, float& Min, float& Max)
 {
-	Max = UKismetMathLibrary::FMax(UKismetMathLibrary::FMax(A, B), C);
 	Min = UKismetMathLibrary::FMin(UKismetMathLibrary::FMin(A, B), C);
+	Max = UKismetMathLibrary::FMax(UKismetMathLibrary::FMax(A, B), C);
 }
 
 float UMathLibrary::ClampCompact(float Value, float Min, float Max)

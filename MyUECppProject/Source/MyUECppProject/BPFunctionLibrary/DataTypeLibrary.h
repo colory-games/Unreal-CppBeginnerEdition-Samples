@@ -17,7 +17,7 @@ class MYUECPPPROJECT_API UDataTypeLibrary : public UBlueprintFunctionLibrary
 
 public:
 	UFUNCTION(BlueprintCallable)
-	static void ComponentWiseSquared(const FVector& In, FVector& ReturnValue);
+	static void ComponentWiseSquared(const FVector& In, FVector& Out);
 
 	UFUNCTION(BlueprintCallable)
 	static void AddRotationAngle(const FRotator& In, float X, float Y, float Z, FRotator& Out);

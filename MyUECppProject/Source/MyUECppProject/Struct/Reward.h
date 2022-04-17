@@ -9,7 +9,7 @@
 USTRUCT(BlueprintType)
 struct FReward
 {
-	GENERATED_USTRUCT_BODY()
+	GENERATED_BODY()
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	int32 Exp = 50;
