@@ -13,7 +13,7 @@ jobs:
     name: Build Project
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/epicgames/unreal-engine:dev-slim-4.27
+      image: ghcr.io/epicgames/unreal-engine:dev-slim-5.0
       credentials:
         username: ${{ secrets.GHCR_USERNAME }}
         password: ${{ secrets.GHCR_PASSWORD }}
