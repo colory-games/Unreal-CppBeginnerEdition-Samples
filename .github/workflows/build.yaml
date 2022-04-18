@@ -22,7 +22,7 @@ jobs:
           username: ${{ secrets.GHCR_USERNAME }}
           password: ${{ secrets.GHCR_PASSWORD }}
           registry: ghcr.io
-          image: epicgames/unreal-engine:dev-slim-5.0
+          image: ghcr.io/epicgames/unreal-engine:dev-slim-5.0
           options: --user root
           run: |
             chown -R ue4 ${GITHUB_WORKSPACE}/
