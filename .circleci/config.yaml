@@ -1,0 +1,29 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ghcr.io/epicgames/unreal-engine:dev-slim-5.0
+        auth:
+          username: $GHCR_USERNAME
+          password: $GHCR_PASSWORD
+    steps:
+      - checkout
+      - run:
+          name: "Install npm dependencies"
+          command: |
+            sudo -u ue4 -H /home/ue4/UnrealEngine/Engine/Build/BatchFiles/RunUAT.sh BuildCookRun \
+              -utf8output \
+              -platform=Linux \
+              -clientconfig=Shipping \
+              -serverconfig=Shipping \
+              -project=${GITHUB_WORKSPACE}/MyUECppProject/MyUECppProject.uproject \
+              -noP4 \
+              -nodebuginfo \
+              -allmaps \
+              -cook \
+              -build \
+              -stage \
+              -prereqs \
+              -pak \
+              -archive \
+              -archivedirectory=/tmp/Packaged
