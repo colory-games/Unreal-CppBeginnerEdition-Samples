@@ -13,12 +13,12 @@ jobs:
     name: Build Project
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
       - name: Test
         run: echo aaa
       - name: Free disk spce
         run: bash free_disk_space.sh
-      - name: Checkout repo
-        uses: actions/checkout@v2
       - uses: addnab/docker-run-action@v3
         with:
           username: ${{ secrets.GHCR_USERNAME }}
