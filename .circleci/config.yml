@@ -1,11 +1,9 @@
-version: 2
-
 workflows:
   build:
     jobs:
       - build-project:
-        context:
-          - unreal-engine-ci
+          context:
+            - unreal-engine-ci
 
 jobs:
   build-project:
