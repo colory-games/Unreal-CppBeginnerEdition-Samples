@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    context: unreal-engine-ci
     docker:
       - image: ghcr.io/epicgames/unreal-engine:dev-slim-5.0
         auth:
