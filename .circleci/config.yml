@@ -11,6 +11,7 @@ jobs:
       - run:
           name: "Build Project"
           command: |
+            env
             ls .
             /home/ue4/UnrealEngine/Engine/Build/BatchFiles/RunUAT.sh BuildCookRun \
               -utf8output \
