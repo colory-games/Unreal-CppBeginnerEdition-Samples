@@ -19,7 +19,7 @@ jobs:
               -platform=Linux \
               -clientconfig=Shipping \
               -serverconfig=Shipping \
-              -project=IntroductionToUECpp/MyUECppProject/MyUECppProject.uproject \
+              -project=${PWD}/MyUECppProject/MyUECppProject.uproject \
               -noP4 \
               -nodebuginfo \
               -allmaps \
