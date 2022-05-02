@@ -52,7 +52,7 @@ void UMathLibrary::Divide(int32 A, int32 B, int32& Quotient, int32& Remainder)
 
 void UMathLibrary::AddRef(UPARAM(ref) float& A, float B)
 {
-	A += B;
+	A = A + B;
 }
 
 void UMathLibrary::MinMax(float A, float B, float C, float& Min, float& Max)
