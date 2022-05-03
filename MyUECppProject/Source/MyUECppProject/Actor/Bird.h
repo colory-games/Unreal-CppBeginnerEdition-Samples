@@ -49,11 +49,11 @@ public:
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = "Internal")
 	int32 InstanceID = -1;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Region")
-	TObjectPtr<class UBoxComponent> VisualField = CreateDefaultSubobject<UBoxComponent>(TEXT("VisualField"));
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly)
+	TObjectPtr<class UBoxComponent> VisualField;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Equipment")
-	TObjectPtr<class UBoosterComponent> FlightBooster = CreateDefaultSubobject<UBoosterComponent>(TEXT("FlightBooster"));
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly)
+	TObjectPtr<class UBoosterComponent> FlightBooster;
 
 	UFUNCTION(BlueprintCallable)
 	void Damage(int32 Amount);

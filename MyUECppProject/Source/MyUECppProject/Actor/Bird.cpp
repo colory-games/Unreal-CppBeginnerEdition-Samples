@@ -10,6 +10,11 @@ ABird::ABird()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	VisualField = CreateDefaultSubobject<UBoxComponent>(TEXT("VisualField"));
+	RootComponent = VisualField;
+
+	FlightBooster = CreateDefaultSubobject<UBoosterComponent>(TEXT("FlightBooster"));
 }
 
 // Called when the game starts or when spawned
