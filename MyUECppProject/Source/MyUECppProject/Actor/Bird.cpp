@@ -92,5 +92,5 @@ float ABird::GetFlightSpeed() const
 		return 0.0f;
 	}
 
-	return UKismetMathLibrary::FMax(50.0f - 0.05f * Weight, 25.0f) + FlightBooster->GetOutput();
+	return UKismetMathLibrary::FMax(50.0f - 0.05f * Weight, 25.0f) + FlightBooster->GetVelocity();
 }

@@ -33,11 +33,11 @@ void UBoosterComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 	}
 }
 
-float UBoosterComponent::GetOutput() const
+float UBoosterComponent::GetVelocity() const
 {
 	if (bEnabled && FuelRest > 0.0f)
 	{
-		return Output;
+		return Power;
 	}
 
 	return 0.0f;

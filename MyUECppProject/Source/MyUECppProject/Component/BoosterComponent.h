@@ -34,8 +34,8 @@ public:
 	bool bEnabled = false;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float Output = 100.0f;
+	float Power = 100.0f;
 
 	UFUNCTION(BlueprintPure)
-	float GetOutput() const;
+	float GetVelocity() const;
 };
