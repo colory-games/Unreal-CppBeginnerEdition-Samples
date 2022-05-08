@@ -46,7 +46,7 @@ public:
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Internal")
 	int32 BirdID = -1;
 
-	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = "Internal")
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadWrite, Category = "Internal")
 	int32 InstanceID = -1;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly)

@@ -30,8 +30,8 @@ void UCircleSplineComponent::PostEditChangeProperty(FPropertyChangedEvent& Prope
 	ClearSplinePoints();
 	for (int32 i = 0; i < PointNum; i++)
 	{
-		float PointAngle = 2.0f * PI / PointNum * i;
-		FVector PointLocation = FVector(Radius * sin(PointAngle), Radius * cos(PointAngle), 0.0f);
+		float Angle = 2.0f * PI / PointNum * i;
+		FVector PointLocation = FVector(Radius * sin(Angle), Radius * cos(Angle), 0.0f);
 		AddSplinePointAtIndex(PointLocation, i, ESplineCoordinateSpace::Local, true);
 	}
 	SetClosedLoop(false, true);

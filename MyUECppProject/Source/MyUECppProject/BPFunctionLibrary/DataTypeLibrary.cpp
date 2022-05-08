@@ -4,12 +4,12 @@
 
 #include "Kismet/KismetMathLibrary.h"
 
-void UDataTypeLibrary::ComponentWiseSquared(const FVector& In, FVector& Out)
+void UDataTypeLibrary::ComponentWiseSquared(FVector In, FVector& Out)
 {
 	Out = In * In;
 }
 
-void UDataTypeLibrary::AddRotationAngle(const FRotator& In, float X, float Y, float Z, FRotator& Out)
+void UDataTypeLibrary::AddRotationAngle(FRotator In, float X, float Y, float Z, FRotator& Out)
 {
 	Out.Roll = In.Roll + X;
 	Out.Pitch = In.Pitch + Y;
@@ -25,21 +25,19 @@ void UDataTypeLibrary::MakeDifference(const FTransform& In1, const FTransform& I
 
 void UDataTypeLibrary::RepeatString(const FString& StringToRepeat, int32 RepeatCount, FString& Out)
 {
-	FString String = "";
+	Out = "";
 
-	for (int32 i = 0; i < RepeatCount; i++)
+	for (int32 i = 1; i <= RepeatCount; i++)
 	{
-		String += StringToRepeat;
+		Out += StringToRepeat;
 	}
-
-	Out = String;
 }
 
 int32 UDataTypeLibrary::Sum(const TArray<int32>& Data)
 {
 	int32 Value = 0;
 
-	for (auto& D : Data)
+	for (int32 D : Data)
 	{
 		Value += D;
 	}
@@ -59,13 +57,13 @@ void UDataTypeLibrary::MakeSquared(const TArray<int32>& Data, TMap<int32, int32>
 {
 	Out.Empty();
 
-	for (auto& D : Data)
+	for (int32 D : Data)
 	{
 		Out.Add(D, D * D);
 	}
 }
 
-void UDataTypeLibrary::DistanceFromActor(const AActor* InActor, const FVector& Location, FVector& Distance)
+void UDataTypeLibrary::DistanceFromActor(const AActor* InActor, FVector Location, FVector& Distance)
 {
 	Distance = InActor->GetActorLocation() - Location;
 }
