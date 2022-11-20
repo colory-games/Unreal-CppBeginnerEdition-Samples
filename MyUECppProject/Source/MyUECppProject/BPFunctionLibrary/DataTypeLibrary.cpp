@@ -29,7 +29,7 @@ void UDataTypeLibrary::RepeatString(const FString& StringToRepeat, int32 RepeatC
 
 	for (int32 i = 1; i <= RepeatCount; i++)
 	{
-		Out += StringToRepeat;
+		Out = Out + StringToRepeat;
 	}
 }
 
