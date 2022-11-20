@@ -3,7 +3,6 @@
 #include "Bird.h"
 
 #include "Kismet/KismetMathLibrary.h"
-#include "Math/UnrealMathUtility.h"
 
 // Sets default values
 ABird::ABird()
@@ -82,7 +81,7 @@ int32 ABird::GetVitality() const
 
 float ABird::GetWalkingSpeed() const
 {
-	return UKismetMathLibrary::FMax(10.0f - 0.01f * Weight, 5.0f);
+	return UKismetMathLibrary::FMin(10.0f - 0.01f * Weight, 5.0f);
 }
 
 float ABird::GetFlightSpeed() const
@@ -92,5 +91,5 @@ float ABird::GetFlightSpeed() const
 		return 0.0f;
 	}
 
-	return UKismetMathLibrary::FMax(50.0f - 0.05f * Weight, 25.0f) + FlightBooster->GetVelocity();
+	return UKismetMathLibrary::FMin(50.0f - 0.05f * Weight, 25.0f) + FlightBooster->GetVelocity();
 }
