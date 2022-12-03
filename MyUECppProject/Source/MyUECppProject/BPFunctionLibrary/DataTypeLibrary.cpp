@@ -63,7 +63,10 @@ void UDataTypeLibrary::MakeSquared(const TArray<int32>& Data, TMap<int32, int32>
 	}
 }
 
-void UDataTypeLibrary::DistanceFromActor(const AActor* InActor, FVector Location, FVector& Distance)
+void UDataTypeLibrary::DistanceFromActor(AActor* InActor, FVector Location, float& Distance)
 {
-	Distance = InActor->GetActorLocation() - Location;
+	if (InActor)
+	{
+		Distance = (InActor->GetActorLocation() - Location).Size();
+	}
 }

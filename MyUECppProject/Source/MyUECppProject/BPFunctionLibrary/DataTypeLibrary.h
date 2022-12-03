@@ -37,5 +37,5 @@ class MYUECPPPROJECT_API UDataTypeLibrary : public UBlueprintFunctionLibrary
 	static void MakeSquared(const TArray<int32>& Data, TMap<int32, int32>& Out);
 
 	UFUNCTION(BlueprintCallable)
-	static void DistanceFromActor(const AActor* InActor, FVector Location, FVector& Distance);
+	static void DistanceFromActor(AActor* InActor, FVector Location, float& Distance);
 };
