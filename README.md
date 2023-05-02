@@ -30,7 +30,7 @@ Visual Studioが起動するため、メニューから [Build] > [Build Solutio
 ビルドが完了したら、`MyUECppProject.uproject` を実行してUnreal Engineエディタを起動します。  
 エディタが起動すると、サンプルプロジェクトで作成したアセットなどを利用できるようになります。
 
-## 変更履歴
+## 更新履歴
 
 [CHANGELOG.md](CHANGELOG.md) を参照してください。
 
