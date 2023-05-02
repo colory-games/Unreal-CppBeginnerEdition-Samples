@@ -14,10 +14,9 @@
 ### 利用手順
 
 1. 最初に、[Releaseページ](https://github.com/colory-games/Unreal-CppBeginnerEdition-Samples/releases) から書籍の版数に対応するリリースページに移動します。
-
-  |書籍の版数|リリースページ|
-  |---|---|
-  |初版||
+   |書籍の版数|リリースページ|
+   |---|---|
+   |初版||
 
 1. `MyUECppProject.zip` をダウンロードし、解凍します。
 1. ディレクトリ `MyUECppProject` に移動して `MyUECppProject.uproject` を右クリックします。
