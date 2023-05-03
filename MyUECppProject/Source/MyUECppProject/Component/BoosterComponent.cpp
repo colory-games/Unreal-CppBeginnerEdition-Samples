@@ -26,19 +26,19 @@ void UBoosterComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 	if (bEnabled)
 	{
 		FuelRest -= DeltaTime;
-		if (FuelRest < 0.0f)
+		if (FuelRest < 0.0)
 		{
-			FuelRest = 0.0f;
+			FuelRest = 0.0;
 		}
 	}
 }
 
-float UBoosterComponent::GetVelocity() const
+double UBoosterComponent::GetVelocity() const
 {
-	if (bEnabled && FuelRest > 0.0f)
+	if (bEnabled && FuelRest > 0.0)
 	{
 		return Power;
 	}
 
-	return 0.0f;
+	return 0.0;
 }

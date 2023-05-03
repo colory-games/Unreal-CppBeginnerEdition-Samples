@@ -28,8 +28,8 @@ public:
 
 	virtual void OnConstruction(const FTransform& Transform) override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parameter", meta = (ClampMin = 0.0f, ClampMax = 1000.0f))
-	float Weight = 10.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Parameter", meta = (ClampMin = 0.0, ClampMax = 1000.0))
+	double Weight = 10.0;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Parameter")
 	bool bFlyable = true;
@@ -65,8 +65,8 @@ public:
 	int32 GetVitality() const;
 
 	UFUNCTION(BlueprintPure)
-	float GetWalkingSpeed() const;
+	double GetWalkingSpeed() const;
 
 	UFUNCTION(BlueprintPure)
-	float GetFlightSpeed() const;
+	double GetFlightSpeed() const;
 };

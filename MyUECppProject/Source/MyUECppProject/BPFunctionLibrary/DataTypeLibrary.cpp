@@ -9,7 +9,7 @@ void UDataTypeLibrary::ComponentWiseSquared(FVector In, FVector& Out)
 	Out = In * In;
 }
 
-void UDataTypeLibrary::AddRotationAngle(FRotator In, float X, float Y, float Z, FRotator& Out)
+void UDataTypeLibrary::AddRotationAngle(FRotator In, double X, double Y, double Z, FRotator& Out)
 {
 	Out.Roll = In.Roll + X;
 	Out.Pitch = In.Pitch + Y;
@@ -63,7 +63,7 @@ void UDataTypeLibrary::MakeSquared(const TArray<int32>& Data, TMap<int32, int32>
 	}
 }
 
-void UDataTypeLibrary::DistanceFromActor(AActor* InActor, FVector Location, float& Distance)
+void UDataTypeLibrary::DistanceFromActor(AActor* InActor, FVector Location, double& Distance)
 {
 	if (InActor)
 	{

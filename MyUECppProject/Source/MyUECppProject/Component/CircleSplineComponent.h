@@ -29,7 +29,7 @@ public:
 #endif
 
 	UPROPERTY(EditAnywhere)
-	float Radius = 300.0f;
+	double Radius = 300.0;
 
 	UPROPERTY(EditAnywhere)
 	int32 PointNum = 30;

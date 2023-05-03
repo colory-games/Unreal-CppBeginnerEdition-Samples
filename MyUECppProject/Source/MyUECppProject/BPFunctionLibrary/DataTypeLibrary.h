@@ -19,7 +19,7 @@ class MYUECPPPROJECT_API UDataTypeLibrary : public UBlueprintFunctionLibrary
 	static void ComponentWiseSquared(FVector In, FVector& Out);
 
 	UFUNCTION(BlueprintCallable)
-	static void AddRotationAngle(FRotator In, float X, float Y, float Z, FRotator& Out);
+	static void AddRotationAngle(FRotator In, double X, double Y, double Z, FRotator& Out);
 
 	UFUNCTION(BlueprintCallable)
 	static void MakeDifference(const FTransform& In1, const FTransform& In2, FTransform& Out);
@@ -37,5 +37,5 @@ class MYUECPPPROJECT_API UDataTypeLibrary : public UBlueprintFunctionLibrary
 	static void MakeSquared(const TArray<int32>& Data, TMap<int32, int32>& Out);
 
 	UFUNCTION(BlueprintCallable)
-	static void DistanceFromActor(AActor* InActor, FVector Location, float& Distance);
+	static void DistanceFromActor(AActor* InActor, FVector Location, double& Distance);
 };
