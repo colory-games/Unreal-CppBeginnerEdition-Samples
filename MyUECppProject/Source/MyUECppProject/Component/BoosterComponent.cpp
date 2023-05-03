@@ -19,7 +19,7 @@ void UBoosterComponent::BeginPlay()
 }
 
 // Called every frame
-void UBoosterComponent::TickComponent(double DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UBoosterComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 

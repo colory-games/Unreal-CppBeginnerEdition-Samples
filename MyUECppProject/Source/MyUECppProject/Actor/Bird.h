@@ -24,7 +24,7 @@ protected:
 
 public:
 	// Called every frame
-	virtual void Tick(double DeltaTime) override;
+	virtual void Tick(float DeltaTime) override;
 
 	virtual void OnConstruction(const FTransform& Transform) override;
 

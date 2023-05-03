@@ -17,7 +17,7 @@ void UCircleSplineComponent::BeginPlay()
 }
 
 // Called every frame
-void UCircleSplineComponent::TickComponent(double DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UCircleSplineComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 }

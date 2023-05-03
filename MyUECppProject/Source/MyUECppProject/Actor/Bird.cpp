@@ -26,7 +26,7 @@ void ABird::BeginPlay()
 }
 
 // Called every frame
-void ABird::Tick(double DeltaTime)
+void ABird::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
