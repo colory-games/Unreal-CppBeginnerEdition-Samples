@@ -22,20 +22,20 @@ protected:
 
 public:
 	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	virtual void TickComponent(double DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float FuelMax = 60.0f;
+	double FuelMax = 60.0;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-	float FuelRest;
+	double FuelRest;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool bEnabled = false;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float Power = 100.0f;
+	double Power = 100.0;
 
 	UFUNCTION(BlueprintPure)
-	float GetVelocity() const;
+	double GetVelocity() const;
 };

@@ -17,7 +17,7 @@ void UCircleSplineComponent::BeginPlay()
 }
 
 // Called every frame
-void UCircleSplineComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UCircleSplineComponent::TickComponent(double DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 }
@@ -30,8 +30,8 @@ void UCircleSplineComponent::PostEditChangeProperty(FPropertyChangedEvent& Prope
 	ClearSplinePoints();
 	for (int32 i = 0; i < PointNum; i++)
 	{
-		float Angle = 2.0f * PI / PointNum * i;
-		FVector PointLocation = FVector(Radius * sin(Angle), Radius * cos(Angle), 0.0f);
+		double Angle = 2.0 * PI / PointNum * i;
+		FVector PointLocation = FVector(Radius * sin(Angle), Radius * cos(Angle), 0.0);
 		AddSplinePointAtIndex(PointLocation, i, ESplineCoordinateSpace::Local, true);
 	}
 	SetClosedLoop(false, true);

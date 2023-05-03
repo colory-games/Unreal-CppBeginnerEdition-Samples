@@ -4,16 +4,16 @@
 
 #include "Kismet/KismetMathLibrary.h"
 
-float UMathLibrary::Add(float A, float B)
+double UMathLibrary::Add(double A, double B)
 {
-	float C;
+	double C;
 
 	C = A + B;
 
 	return C;
 }
 
-float UMathLibrary::Clamp(float Value, float Min, float Max)
+double UMathLibrary::Clamp(double Value, double Min, double Max)
 {
 	if (Value < Min)
 	{
@@ -50,18 +50,18 @@ void UMathLibrary::Divide(int32 A, int32 B, int32& Quotient, int32& Remainder)
 	Remainder = A % B;
 }
 
-void UMathLibrary::AddRef(UPARAM(ref) float& A, float B)
+void UMathLibrary::AddRef(UPARAM(ref) double& A, double B)
 {
 	A = A + B;
 }
 
-void UMathLibrary::MinMax(float A, float B, float C, float& Min, float& Max)
+void UMathLibrary::MinMax(double A, double B, double C, double& Min, double& Max)
 {
 	Min = UKismetMathLibrary::FMin(UKismetMathLibrary::FMin(A, B), C);
 	Max = UKismetMathLibrary::FMax(UKismetMathLibrary::FMax(A, B), C);
 }
 
-float UMathLibrary::ClampCompact(float Value, float Min, float Max)
+double UMathLibrary::ClampCompact(double Value, double Min, double Max)
 {
 	if (Value < Min)
 	{

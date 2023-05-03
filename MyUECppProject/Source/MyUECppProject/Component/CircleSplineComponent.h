@@ -22,14 +22,14 @@ protected:
 
 public:
 	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	virtual void TickComponent(double DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 #if WITH_EDITOR
 	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
 #endif
 
 	UPROPERTY(EditAnywhere)
-	float Radius = 300.0f;
+	double Radius = 300.0;
 
 	UPROPERTY(EditAnywhere)
 	int32 PointNum = 30;

@@ -17,10 +17,10 @@ class MYUECPPPROJECT_API UMathLibrary : public UBlueprintFunctionLibrary
 
 public:
 	UFUNCTION(BlueprintCallable)
-	static float Add(float A, float B);
+	static double Add(double A, double B);
 
 	UFUNCTION(BlueprintCallable)
-	static float Clamp(float Value, float Min, float Max);
+	static double Clamp(double Value, double Min, double Max);
 
 	UFUNCTION(BlueprintCallable)
 	static int32 Accumulate(int32 N);
@@ -29,11 +29,11 @@ public:
 	static void Divide(int32 A, int32 B, int32& Quotient, int32& Remainder);
 
 	UFUNCTION(BlueprintCallable)
-	static void AddRef(UPARAM(ref) float& A, float B);
+	static void AddRef(UPARAM(ref) double& A, double B);
 
 	UFUNCTION(BlueprintCallable)
-	static void MinMax(float A, float B, float C, float& Min, float& Max);
+	static void MinMax(double A, double B, double C, double& Min, double& Max);
 
 	UFUNCTION(BlueprintPure, Category = "Math", meta = (CompactNodeTitle = "Clamp"))
-	static float ClampCompact(float Value, float Min, float Max);
+	static double ClampCompact(double Value, double Min, double Max);
 };

@@ -26,7 +26,7 @@ void ABird::BeginPlay()
 }
 
 // Called every frame
-void ABird::Tick(float DeltaTime)
+void ABird::Tick(double DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
@@ -79,17 +79,17 @@ int32 ABird::GetVitality() const
 	return Vitality;
 }
 
-float ABird::GetWalkingSpeed() const
+double ABird::GetWalkingSpeed() const
 {
-	return UKismetMathLibrary::FMin(10.0f - 0.01f * Weight, 5.0f);
+	return UKismetMathLibrary::FMin(10.0 - 0.01 * Weight, 5.0);
 }
 
-float ABird::GetFlightSpeed() const
+double ABird::GetFlightSpeed() const
 {
 	if (!bFlyable)
 	{
-		return 0.0f;
+		return 0.0;
 	}
 
-	return UKismetMathLibrary::FMin(50.0f - 0.05f * Weight, 25.0f) + FlightBooster->GetVelocity();
+	return UKismetMathLibrary::FMin(50.0 - 0.05 * Weight, 25.0) + FlightBooster->GetVelocity();
 }
