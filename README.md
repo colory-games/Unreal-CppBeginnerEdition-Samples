@@ -1,6 +1,6 @@
-# 『アンリアる！C++編』サンプルプロジェクト
+# 『アンリアる！ C++入門編 ～対話形式で学ぶUnreal Engine～』サンプルプロジェクト
 
-本リポジトリでは、技術書『アンリアる！ C++編』で作成するサンプルプロジェクトのソースコードを公開しています。
+本リポジトリでは、[技術書『アンリアる！ C++入門編 ～対話形式で学ぶUnreal Engine～』](https://colory-games.booth.pm/items/4734728)で作成するサンプルプロジェクトのソースコードを公開しています。
 
 ## サンプルプロジェクトの利用方法
 
@@ -16,7 +16,7 @@
 1. 最初に、[Releaseページ](https://github.com/colory-games/Unreal-CppBeginnerEdition-Samples/releases) から書籍の版数に対応するリリースページに移動します。
    |書籍の版数|リリースページ|
    |---|---|
-   |初版||
+   |初版|[Version 1.0](https://github.com/colory-games/Unreal-CppBeginnerEdition-Samples/releases/tag/v1.0.0)|
 
 1. `MyUECppProject.zip` をダウンロードし、解凍します。
 1. ディレクトリ `MyUECppProject` に移動して `MyUECppProject.uproject` を右クリックします。
