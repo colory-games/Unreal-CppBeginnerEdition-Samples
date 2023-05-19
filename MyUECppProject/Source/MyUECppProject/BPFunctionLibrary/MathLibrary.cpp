@@ -70,8 +70,6 @@ int32 UMathLibrary::Accumulate(int32 N)
 	return Out;
 }
 
-
-
 void UMathLibrary::MinMax(double A, double B, double C, double& Min, double& Max)
 {
 	Min = UKismetMathLibrary::FMin(UKismetMathLibrary::FMin(A, B), C);
