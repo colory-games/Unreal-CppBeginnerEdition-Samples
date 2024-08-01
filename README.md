@@ -32,4 +32,4 @@
 
 ## バグ報告や議論
 
-サンプルプロジェクトにバグが存在する場合は、[Issue](https://github.com/colory-games/Unreal-CppBeginnerEdition-Samples/issues) や [Discord](https://discord.gg/F9cRxfAuJd) などで報告いただけると助かります。
+サンプルプロジェクトにバグが存在する場合は、[Issue](https://github.com/colory-games/Unreal-CppBeginnerEdition-Samples/issues) や [Discord (アンリアる！cpp入門編 チャンネル)](https://discord.gg/dV7JkrhFRC) などで報告いただけると助かります。
