@@ -1,16 +1,16 @@
 workflows:
-  version: 2
+  version: 2.1
   build:
     jobs:
       - build-project:
           context:
             - unreal-engine-ci
 
-version: 2
+version: 2.1
 jobs:
   build-project:
     docker:
-      - image: ghcr.io/epicgames/unreal-engine:dev-slim-5.1
+      - image: ghcr.io/epicgames/unreal-engine:dev-slim-5.1.0
         auth:
           username: $GHCR_USERNAME
           password: $GHCR_PASSWORD
