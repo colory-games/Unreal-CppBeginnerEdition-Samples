@@ -10,7 +10,7 @@ version: 2
 jobs:
   build-project:
     docker:
-      - image: ghcr.io/epicgames/unreal-engine:dev-slim-5.1
+      - image: ghcr.io/epicgames/unreal-engine:dev-slim-5.1.0
         auth:
           username: $GHCR_USERNAME
           password: $GHCR_PASSWORD
